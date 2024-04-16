@@ -26,7 +26,8 @@ Installation and Execution
 To run the project, ensure that Docker and Docker Compose are installed on your system. Then, by using the following commands, configure the Docker Compose and Nginx files and run the project:
 
 Copy code
-docker-compose up -d
+
+"docker-compose up -d"
 Running this command will execute all project services on containers, and the project will be ready for use.
 
 Conclusion
