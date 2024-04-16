@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:  # Defines the different services that make up the application.
+
+  nginx:  # Service definition for the Nginx web server, used here as a load balancer.
+    image: nginx:latest   
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf  # Mounts the Nginx configuration file from the host to the container.
+    ports:
+      - "80:80"  # Maps port 80 on the host to port 80 on the container, making the web server accessible externally.
+    networks:
+      - cangrownet  
+    depends_on:
+      - wordpress1  # Specifies that Nginx depends on the 'wordpress1' service.
+      - wordpress2  # Specifies that Nginx also depends on the 'wordpress2' service.
+
+  wordpress1:  # First WordPress service instance.
+    image: wordpress:latest 
+    environment:
+      - WORDPRESS_DB_HOST=mariadb  # Environment variable specifying the database host.
+      - WORDPRESS_DB_USER=wordpress  
+      - WORDPRESS_DB_PASSWORD=wordpress  
+      - WORDPRESS_DB_NAME=wordpress  
+    volumes:
+      - wordpress_data:/var/www/html  # Mounts the volume for persistent WordPress content.
+    networks:
+      - cangrownet  
+
+  wordpress2:  # Second WordPress service instance, similar to the first.
+    image: wordpress:latest
+    environment:
+      - WORDPRESS_DB_HOST=mariadb
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - cangrownet
+
+  mariadb:  # MariaDB service used as the database for WordPress.
+    image: mariadb:latest   
+    environment:
+      - MYSQL_ROOT_PASSWORD=wordpress  # Sets the root password for MariaDB.
+      - MYSQL_DATABASE=wordpress 
+      - MYSQL_USER=wordpress  
+      - MYSQL_PASSWORD=wordpress  
+    volumes:
+      - db_data:/var/lib/mysql  # Mounts the volume for persistent database storage.
+    networks:
+      - cangrownet  
+
+volumes:  # Defines persistent storage volumes used by the services.
+  wordpress_data:  # Volume used for storing WordPress files.
+  db_data:  # Volume used for storing database data.
+
+networks:  # Defines networks used to connect the isolated containers.
+  cangrownet:  # Custom network named 'cangrownet'.
+    driver: bridge  # Uses the bridge driver for Docker networking.
