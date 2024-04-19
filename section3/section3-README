@@ -1,0 +1,39 @@
+# WordPress Multi-Instance Deployment with Docker Compose
+
+This Docker Compose configuration deploys multiple instances of WordPress along with MariaDB and ProxySQL for database management and load balancing.
+
+## Prerequisites
+
+- Docker
+- Docker Compose
+
+## Installation
+
+1. Clone this repository to your local machine.
+2. Create a .env file in the project root directory and add your environment variables as key-value pairs.
+3. Modify the docker-compose.yml file to customize any settings if needed.
+4. Run docker-compose up -d to start the services in detached mode.
+5. Access WordPress instances via http://localhost or your server IP.
+
+## Configuration
+
+### Environment Variables
+
+- Update the .env file with appropriate values for your environment.
+- This file contains environment variables used by the Docker Compose services.
+
+### Custom Nginx Configuration
+
+- Modify the nginx.conf file in the project root to customize Nginx settings.
+- This file is mounted into the Nginx container for custom server configurations.
+
+### ProxySQL Configuration
+
+- Modify the proxysql.cnf file in the project root to customize ProxySQL settings.
+- This file is mounted into the ProxySQL container for custom configurations.
+
+## Usage
+
+- Access WordPress instances via http://localhost or your server IP.
+- Use ProxySQL for database load balancing and management.
+- Customize configurations as needed for your specific requirements.
