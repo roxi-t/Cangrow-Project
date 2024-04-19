@@ -1,0 +1,28 @@
+# ProxySQL Configuration File
+
+# Define MySQL Servers
+mysql_servers_table =
+(
+    { address = "mariadb-master", port = 3306, hostgroup = 10 },
+    { address = "mariadb-replica", port = 3306, hostgroup = 20 }
+)
+
+# Define MySQL Users
+mysql_users_table =
+(
+    { username = "user", password = "password", default_hostgroup = 10, max_connections = 100 },
+    { username = "replica", password = "replicapassword", default_hostgroup = 20, max_connections = 100 }
+)
+
+# Define Query Rules
+mysql_query_rules =
+(
+    { rule_id = 1, active = 1, match_digest = "^SELECT.*", destination_hostgroup = 20 },
+    { rule_id = 2, active = 1, match_digest = "^INSERT.*|^UPDATE.*|^DELETE.*", destination_hostgroup = 10 }
+)
+
+# Define Monitoring Users
+mysql_monitor_users =
+(
+    { username = "monitor", password = "monitorpassword", default_hostgroup = 10, max_connections = 1 }
+)

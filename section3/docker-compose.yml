@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - cangrownet
+    env_file: env.
+
+  wordpress1:
+    image: wordpress:latest
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - cangrownet
+    env_file: env.
+
+  wordpress2:
+    image: wordpress:latest
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - cangrownet
+    env_file: env.
+
+  mariadb-master:
+    image: mariadb:latest
+    volumes:
+      - master-data:/var/lib/mysql
+    networks:
+      - cangrownet
+    env_file: env.
+
+  mariadb-replica:
+    image: mariadb:latest
+    volumes:
+      - replica-data:/var/lib/mysql
+    networks:
+      - cangrownet
+    command: --replicate-do-db=mydb --server-id=2
+    env_file: env.
+
+  proxysql:
+    image: proxysql/proxysql
+    volumes:
+      - ./proxysql.cnf:/etc/proxysql.cnf
+    ports:
+      - "6033:6033"
+    depends_on:
+      - mariadb-master
+      - mariadb-replica
+    networks:
+      - cangrownet
+    env_file: env.
+
+volumes:
+  wordpress_data:
+  master-data:
+  replica-data:
+
+networks:
+  cangrownet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/28
