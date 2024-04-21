@@ -15,4 +15,4 @@ jobs:
 
       - name: Deploy theme
         run: |
-         cp -r twentytwentytwo wp-content/themes/twentytwentytwo/
+         cp -r twentytwentytwo /wp-content/themes
