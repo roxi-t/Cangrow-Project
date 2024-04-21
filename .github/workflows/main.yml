@@ -15,4 +15,4 @@ jobs:
 
       - name: Deploy theme
         run: |
-         cp -r twentytwentytwo /var/lib/docker/overlay2/6224b9db33212c98f0a8fa6ee142cd3bc5394e71b809ebd68e7403550137648d/diff/usr/src/wordpress/wp-content
+         cp -r twentytwentytwo /home/debian/wp-content/themes
