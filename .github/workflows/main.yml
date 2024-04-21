@@ -16,7 +16,7 @@ jobs:
       - name: Deploy to WordPress Theme
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ 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 }}
           publish_dir: ./wp-content/themes/twentytwentytwo
           publish_branch: gh-pages
           allow_empty_commit: true
