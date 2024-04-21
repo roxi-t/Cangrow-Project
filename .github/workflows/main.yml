@@ -15,4 +15,4 @@ jobs:
 
       - name: Deploy theme
         run: |
-         cp -r twentytwentytwo sudo /var/lib/docker/volumes/debian_wp2-data/_data/wp-content
+         cp -r twentytwentytwo sudo/var/lib/docker/volumes/debian_wp2-data/_data/wp-content
