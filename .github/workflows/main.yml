@@ -15,4 +15,4 @@ jobs:
 
       - name: Deploy theme
         run: |
-          cp -r /home/debian/Cangrow-Project/section2/twentytwentytwo debian@185.240.151.74:http://185.240.151.74/wp-admin/themes.php?theme=twentytwentytwo
+          cp -r /home/debian/Cangrow-Project/section2/twentytwentytwodebian@185.240.151.74: http://185.240.151.74/wp-admin/themes.php?theme=twentytwentytwo
