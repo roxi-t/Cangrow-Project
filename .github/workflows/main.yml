@@ -14,8 +14,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy to WordPress Theme
-        uses: appleboy/rsync-action@master
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          args: -avz --delete ./wp-content/themes/twentytwentytwo debian@185.240.151.74:/var/lib/docker/overlay2/6224b9db33212c98f0a8fa6ee142cd3bc5394e71b809ebd68e7403550137648d/diff/usr/src/wordpress/wp-content/themes
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./wp-content/themes/twentytwentytwo
+          publish_branch: gh-pages
+          allow_empty_commit: true
+
