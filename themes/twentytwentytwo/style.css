@@ -41,7 +41,7 @@ a {
 
 a:hover,
 a:focus {
-	text-decoration-style: dashed;
+	text-decoration-style: double;
 }
 
 a:active {
