@@ -1,10 +1,13 @@
 CI/CD pipeline for WordPress theme deployment
+
 This CI/CD pipeline automates the process of deploying a WordPress theme using GitHub Actions. With these settings, each push to the root branch will initiate the deployment process, ensuring smooth and consistent updates to your WordPress theme.
 
 Workflow details
+
 Trigger: The pipeline is executed on each push to the main branch.
 Operating System: The latest Ubuntu environment is used to run.
 Levels
+
 Checkout Repository: This step checks the repository to prepare it for execution.
 Deploy to WordPress Theme: This step deploys the WordPress theme using the peaceiris/actions-gh-pages@v3 action. It publishes these files to the gh-pages branch using a personal GitHub token stored in Secrets.GH_PAGES_TOKEN. The publish_dir parameter specifies the directory containing the theme files. Optionally allow empty commits if needed.
 use
