@@ -13,11 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Deploy to WordPress Theme
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
-          publish_dir: ./wp-content/themes/twentytwentytwo
-          publish_branch: gh-pages
-          allow_empty_commit: true
+      # Add your build steps here if needed
 
+      - name: SSH Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: debian@185.240.151.74
+          username: roxi-t
+          password: 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
+          script: |
+            cd /var/lib/docker/overlay2/6224b9db33212c98f0a8fa6ee142cd3bc5394e71b809ebd68e7403550137648d/diff/usr/src/wordpress/wp-content/themes
+            git pull origin main
