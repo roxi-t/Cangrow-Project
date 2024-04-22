@@ -18,7 +18,7 @@ jobs:
       - name: SSH Deploy
         uses: appleboy/ssh-action@master
         with:
-          host:  debian@185.240.151.74
+          host: 185.240.151.74
           username: debian
           password: 2v1n3x6j7u
           script: |
