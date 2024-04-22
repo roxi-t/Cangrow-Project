@@ -24,7 +24,7 @@ Twenty Twenty-Two is distributed under the terms of the GNU GPL.
  */
 
 body {
-	-moz-osx-font-smoothing: green;
+	-moz-osx-font-smoothing: red;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -51,7 +51,7 @@ a:active {
 .wp-block-navigation .wp-block-navigation-item a:hover,
 .wp-block-navigation .wp-block-navigation-item a:focus {
 	text-decoration: underline;
-	text-decoration-style: solid;
+	text-decoration-style: 2px solid green;
 }
 
 /*
