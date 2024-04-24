@@ -1,41 +1,36 @@
-CanGrow-Final-project
-section1 
-
-A brief description of what this project does and who it's for
+README for CanGrow-Final-Project Section 1
 
 Introduction
 
-Cangrow-Project is a web application consisting of two main services: Nginx and WordPress. This project utilizes Docker Compose for managing and running containers and employs Nginx as a web server to create a load-balanced deployment for two instances of WordPress.
+CanGrow-Final-Project is a web application that utilizes Docker Compose to manage and run containers. It includes Nginx as a web server for load-balancing two instances of WordPress.
 
 Project Structure
 
-The project consists of two main files:
+The project has two main files:
 
-docker-compose.yml: This file contains Docker Compose configurations that define the setup for running Nginx, WordPress1, WordPress2, and MariaDB containers.
-
-nginx.conf: This file contains Nginx configurations serving as the web server for the project. These configurations include proxying to two instances of WordPress provided by WordPress1 and WordPress2 services.
+• docker-compose.yml: Docker Compose configuration for running Nginx, WordPress1, WordPress2, and MariaDB containers.
+• nginx.conf: Nginx configuration for the web server, including proxying to WordPress instances.
 
 File Descriptions
 
-1. docker-compose.yml
-services: This section includes various definitions for each service in the project, including Nginx, WordPress1, WordPress2, and MariaDB.
-volumes: Defines repository volumes for storing persistent WordPress and MariaDB database data.
-networks: Defines networks used for communication between containers.
+docker-compose.yml
 
-3. nginx.conf
-upstream wordpress_cluster: Defines a group of WordPress servers as a load-balancing proxy.
-server: Defines a server as a host for proxying to WordPress services.
-location /: Sets up the proxy path for web requests to WordPress services.
+• services: Defines services (Nginx, WordPress1, WordPress2, MariaDB) and their configurations.
+• volumes: Persistent storage for WordPress and MariaDB data.
+• networks: Networks for container communication.
+
+nginx.conf
+
+• upstream wordpress_cluster: Load-balancing proxy for WordPress servers.
+• server: Host for proxying to WordPress services.
+
 Installation and Execution
-To run the project, ensure that Docker and Docker Compose are installed on your system. Then, by using the following commands, configure the Docker Compose and Nginx files and run the project:
 
-Copy code
-
-"docker-compose up -d"
-Running this command will execute all project services on containers, and the project will be ready for use.
+1. Ensure Docker and Docker Compose are installed.
+2. Run the following commands:
+   * docker-compose up -d to run the project's services.
+3. The project will be ready for use.
 
 Conclusion
 
-By executing these Docker Compose and Nginx files, the environment of the Cangrow-Project is prepared, and you can utilize it to create a load-balanced web deployment using WordPress.
-
-These project documents provide explanations about the project structure, the files used, and how to install and execute it.
+This project provides a load-balanced WordPress deployment using Docker Compose and Nginx. The documentation includes explanations of the project structure, files, and installation/execution instructions.
