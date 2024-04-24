@@ -34,7 +34,7 @@ Configuration
 
 Networking
 
-• Custom bridge network named cangrownet with subnet 172.28.0.0/28.
+• Custom bridge network named cangrownet with subnet /28
 
 Volumes
 
