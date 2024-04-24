@@ -21,7 +21,8 @@ docker-compose.yml
 
 nginx.conf
 
-• upstream wordpress_cluster: Load-balancing proxy for WordPress servers.
+• upstream wordpress_cluster: Load-balancing proxy for WordPress servers
+
 • server: Host for proxying to WordPress services.
 
 Installation and Execution
