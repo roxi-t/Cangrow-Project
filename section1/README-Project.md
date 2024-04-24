@@ -1,6 +1,6 @@
 README for CanGrow-Final-Project Section 1
 
-#Introduction
+Introduction
 
 CanGrow-Final-Project is a web application that utilizes Docker Compose to manage and run containers. It includes Nginx as a web server for load-balancing two instances of WordPress.
 
