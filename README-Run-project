@@ -1,0 +1,22 @@
+## Running the Project
+
+To run this project in the /opt/Roxana-Teymoori-CanGrow/section3 directory, follow these steps:
+
+1. Clone the project from your personal GitHub repository or the main project repository using the following command in your terminal:
+
+git clone https://github.com/your-username/wordpress-multi-instance-docker.git /opt/Roxana-Teymoori-CanGrow/section3
+
+
+2. Navigate into the project directory and create a .env file. Set the required environment variables in the .env file using the KEY=VALUE format.
+
+3. Optionally, you can modify the docker-compose.yml file to customize the settings.
+
+4. Use Docker Compose to start the services in detached mode:
+
+cd /opt/Roxana-Teymoori-CanGrow/section3
+docker-compose up -d
+
+
+5. You should now be able to access your WordPress website at http://localhost or your server's IP address. You will also have access to the database where you have previously stored the desired data.
+
+You can now access your WordPress website and the associated database, benefiting from the load balancing and database management capabilities provided by ProxySQL.
