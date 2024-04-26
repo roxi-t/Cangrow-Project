@@ -36,9 +36,13 @@ Prerequisites
 ## Configuration
 
 • docker-compose.yml: Defines configurations for all services, including:
+
     * Nginx: Reverse proxy settings and port mapping.
+    
     * WordPress: Persistent data storage and database connection settings.
+    
     * MariaDB: Database configuration and replication options.
+    
 • nginx.conf: Nginx web server configuration.
 
 ## Networking
@@ -48,7 +52,9 @@ Prerequisites
 ## Volumes
 
 • wordpress_data: Persistent storage for WordPress data.
+
 • master-data: Persistent storage for MariaDB master data.
+
 • replica-data: Persistent storage for MariaDB replica data.
 
 ## Additional Information
