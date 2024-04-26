@@ -11,7 +11,7 @@ Clone the project from your personal GitHub repository or the main project repos
 ```shell
 git clone https://github.com/roxi-t/Cangrow-Project.git
 
-      a directory named Cangrow-Project has been created
+      #a directory named Cangrow-Project has been created
 
 ```shell
 cd Cangrow-project
