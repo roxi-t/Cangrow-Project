@@ -20,7 +20,10 @@ cd Cangrow-Project
 ```shell
 cd  Cangrow-Project/section3
 ```
-And run the project with this command
+5. And run the project with this command
 ```shell
 docker-compose up -d
 ````
+## At the End 
+
+ You should now be able to access your WordPress website at http://localhost or your server IP address. You will also have access to the database where you have previously stored the desired data.
