@@ -1,11 +1,11 @@
 ## Implementation of the project
 
-To run this project in the folder /opt/Roxana-Teymoori-CanGrow/section3, follow the steps below:
+To run this project in the folder     Roxana-Teymoori-CanGrow/section3, follow the steps below:
 
 1. Clone the project from your personal GitHub repository or the main project repository using the following command in your terminal:
 
-git clone https://github.com/roxi-t/Cangrow-Project.git in directory  /opt/Roxana-Teymoori-CanGrow/section3
-
+git clone https://github.com/roxi-t/Cangrow-Project.git in directory 
+ a directory named Cangrow-Project has been created
 
 2. Go to the project directory and create an .env file. Set the required environment variables in the .env file using the KEY=VALUE format.
 
@@ -16,6 +16,7 @@ git clone https://github.com/roxi-t/Cangrow-Project.git in directory  /opt/Roxan
 cd /Cangrow-Project/section3
 docker-compose up -d
 
+In this directory are all the necessary files to run this project
 
 5. You should now be able to access your WordPress website at http://localhost or your server IP address. You will also have access to the database where you have previously stored the desired data.
 
