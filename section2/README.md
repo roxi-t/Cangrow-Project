@@ -37,11 +37,11 @@ Prerequisites
 
 • docker-compose.yml: Defines configurations for all services, including:
 
-    * Nginx: Reverse proxy settings and port mapping.
+    • Nginx: Reverse proxy settings and port mapping.
     
-    * WordPress: Persistent data storage and database connection settings.
+    • WordPress: Persistent data storage and database connection settings.
     
-    * MariaDB: Database configuration and replication options.
+    • MariaDB: Database configuration and replication options.
     
 • nginx.conf: Nginx web server configuration.
 
