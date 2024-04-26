@@ -33,7 +33,7 @@ Before starting, ensure you have Docker and Docker Compose installed on your mac
 To install and run the project, follow these steps:
 
 1. Clone the repository:
-   ```shell
+```shell
 git clone https://github.com/your-username/wordpress-multi-instance-docker.git
 ```
 
