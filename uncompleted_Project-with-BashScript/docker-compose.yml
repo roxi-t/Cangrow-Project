@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  # Nginx service for handling web traffic
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"  # Expose port 80 for HTTP traffic
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf  # Mount custom nginx configuration
+    networks:
+      - cangrownet  # Use the cangrownet network
+    env_file: env  # Load environment variables from the 'env' file
+
+  # First instance of WordPress
+  wordpress1:
+    image: wordpress:latest
+    volumes:
+      - wordpress_data:/var/www/html  # Mount data volume for WordPress
+    networks:
+      - cangrownet  # Use the cangrownet network
+    env_file: env  # Load environment variables from the 'env' file
+
+  # Second instance of WordPress
+  wordpress2:
+    image: wordpress:latest
+    volumes:
+      - wordpress_data:/var/www/html  # Mount data volume for WordPress
+    networks:
+      - cangrownet  # Use the cangrownet network
+    env_file: env  # Load environment variables from the 'env' file
+
+  # Master MariaDB database
+  mariadb-master:
+    image: mariadb:latest
+    volumes:
+      - master-data:/var/lib/mysql
+      - ./opt/Roxana-Teymoori-CanGrow.initial.sh:/docker-entrypoint-initdb.d/init-script.sh
+    networks:
+      - cangrownet
+    env_file: env
+    command: ["bash", "-c", "chmod +x /docker-entrypoint-initdb.d/init-script.sh && /docker-entrypoint-initdb.d/init-script.sh"]
+
+  # Replica MariaDB database
+  mariadb-replica:
+    image: mariadb:latest
+    volumes:
+      - replica-data:/var/lib/mysql  # Mount data volume for MariaDB
+    networks:
+      - cangrownet  # Use the cangrownet network
+    env_file: env  # Load environment variables from the 'env' file
+    command: ["bash", "-c", "./replicadb/initial_mariadb_replica.sh"]  # Run the initial_mariadb_replica.sh script on container startup
+
+  # ProxySQL service for database load balancing
+  proxysql:
+    image: proxysql/proxysql
+    volumes:
+      - ./proxysql:/etc/proxysql  # Mount ProxySQL configuration
+    ports:
+      - "6033:6033"  # Expose port 6033 for ProxySQL
+    depends_on:
+      - mariadb-master  # Depend on the master MariaDB instance
+      - mariadb-replica  # Depend on the replica MariaDB instance
+    networks:
+      - cangrownet  # Use the cangrownet network
+    env_file: env  # Load environment variables from the 'env' file
+    command: ["bash", "-c", "./proxysql/initial_proxysql.sh"]  # Run the initial_proxysql.sh script on container startup
+
+volumes:
+  wordpress_data:  # Volume for WordPress data
+  master-data:     # Volume for master MariaDB data
+  replica-data:  # Volume for replica MariaDB data
+
+networks:
+  cangrownet:  # Define a custom bridge network
+    driver: bridge  # Use the bridge network driver
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16  # Define the IP subnet for the network
