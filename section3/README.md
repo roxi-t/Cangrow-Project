@@ -13,24 +13,29 @@ This project provides a Docker Compose configuration for deploying multiple inst
 ## Prerequisites
 
 - Docker:  https://docs.docker.com/get-docker/
-- Docker Compose:   https://docs.docker.com/compose/install/
+- Docker Compose: https://docs.docker.com/compose/install/
 
 ## Installation
 
-1. Clone this repository:    git clone https://github.com/your-username/wordpress-multi-instance-docker.git
+1. Clone this repository:
+```shell
+   git clone https://github.com/your-username/wordpress-multi-instance-docker.git
+```
 
-2. Create a .env file in the project root directory and add your environment variables (see below for details).
+3. Create a .env file in the project root directory and add your environment variables 
 
-3. Modify docker-compose.yml for any desired customization (optional).
+4. Modify docker-compose.yml for any desired customization (optional).
 
-4. Start the services: docker-compose up -d
-
+5. Start the services:
+```shell
+ docker-compose up -d
+```
 ## Configuration
 
 ### Environment Variables
 
-Set the following environment variables in .env:
-
+Set the following environment variables in env.:
+```shell
 - WORDPRESS_DB_USER (default: root)
 - WORDPRESS_DB_PASSWORD (default: password)
 - WORDPRESS_DB_NAME (default: wordpress)
@@ -38,7 +43,7 @@ Set the following environment variables in .env:
 - PROXYSQL_ADMIN_USER (default: proxysql_admin)
 - PROXYSQL_ADMIN_PASSWORD (default: password)
 - NGINX_HOST (default: localhost)
-
+```
 ### Custom Nginx Configuration
 
 Customize Nginx settings in nginx.conf. It's mounted into the Nginx container.
