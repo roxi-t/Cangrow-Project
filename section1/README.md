@@ -29,7 +29,9 @@ Installation and Execution
 
 1. Ensure Docker and Docker Compose are installed.
 2. Run the following commands:
-   * docker-compose up -d to run the project's services.
+   ```shell
+    docker-compose up -d to run the project's services.
+   ```
 3. The project will be ready for use.
 
 Conclusion
