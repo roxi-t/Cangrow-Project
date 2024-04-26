@@ -15,11 +15,13 @@ Usage
 2. ```shell
     git clone https://github.com/roxi-t/Cangrow-Project.git
    ```
-3. Navigate to the project directory:```shell
-4.  cd Cangrow-Project
-5.  ```
-6. Run Docker Compose: ```shell
-7. docker-compose up -d
+3. Navigate to the project directory:
+ ```shell
+  cd Cangrow-Project
+```
+7. Run Docker Compose:
+```shell
+ docker-compose up -d
 ```
 9. Access WordPress at: http://localhost or your server IP
 
