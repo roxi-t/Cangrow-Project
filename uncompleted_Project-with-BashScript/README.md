@@ -28,6 +28,7 @@ To run the main project without the use of Bash scripts, please follow the steps
    Change to the `section3` directory where the functional Docker Compose setup is located:
 ```shell
 cd Cangrow-Project/section3
+```
 Start the Project:
 Launch the Docker containers using:
 ```shell
