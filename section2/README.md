@@ -17,7 +17,7 @@ Prerequisites
    ```
 2. Navigate to the project directory:
  ```shell
-cd Cangrow-Project
+cd Cangrow-Project/section3
 ```
 3. Run Docker Compose:
 ```shell
