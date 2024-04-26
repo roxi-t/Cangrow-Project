@@ -50,7 +50,7 @@ To deploy and run the project, follow these steps:
 3. Navigate to the project directory.
 4. Execute the following command to start the services in detached mode:
    ```shell
-   docker-compose up -d
+docker-compose up -d
 
 ## Conclusion
 
