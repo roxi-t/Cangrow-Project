@@ -30,6 +30,11 @@ This project provides a Docker Compose configuration for deploying multiple inst
 ```shell
  docker-compose up -d
 ```
+6. and  running this command
+```shell
+docker ps
+```
+And you can see that 6 containers have been built and 3 phases of the project are working properly so far.
 ## Configuration
 
 ### Environment Variables
