@@ -1,10 +1,12 @@
 ##Implementation of the project
 
-To run this project in the folder     Roxana-Teymoori-CanGrow/section3, follow the steps below:
+To run this project in the folder /Cangrow-project/section3, follow the steps below:
 
 1. Clone the project from your personal GitHub repository or the main project repository using the following command in your terminal:
 
-git clone https://github.com/roxi-t/Cangrow-Project.git in directory 
+```shell
+     git clone https://github.com/roxi-t/Cangrow-Project.git```
+in directory 
  a directory named Cangrow-Project has been created
 
 2. Go to the project directory and create an .env file. Set the required environment variables in the .env file using the KEY=VALUE format.
