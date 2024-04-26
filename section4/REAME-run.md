@@ -1,4 +1,3 @@
-# README for Cangrow-Project
 
 ## Section 4 - Workflow CI/CD
 
