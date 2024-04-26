@@ -12,14 +12,17 @@ This project provides a Docker Compose configuration for deploying multiple inst
 
 ## Prerequisites
 
-- Docker: https://docs.docker.com/get-docker/
-- Docker Compose: https://docs.docker.com/compose/install/
+- Docker:  https://docs.docker.com/get-docker/
+- Docker Compose:   https://docs.docker.com/compose/install/
 
 ## Installation
 
-1. Clone this repository: git clone https://github.com/your-username/wordpress-multi-instance-docker.git
+1. Clone this repository:    git clone https://github.com/your-username/wordpress-multi-instance-docker.git
+
 2. Create a .env file in the project root directory and add your environment variables (see below for details).
+
 3. Modify docker-compose.yml for any desired customization (optional).
+
 4. Start the services: docker-compose up -d
 
 ## Configuration
@@ -47,9 +50,6 @@ Customize ProxySQL settings in proxysql.cnf. It's mounted into the ProxySQL cont
 ## Usage
 
 Access WordPress instances via http://localhost (or your server IP) with the following URLs:
-
-- Instance 1: /
-- Instance 2: /wp2
 
 ProxySQL handles database load balancing and failover.
 
