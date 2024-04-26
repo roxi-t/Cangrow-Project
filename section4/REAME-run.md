@@ -16,9 +16,9 @@ ls -la
 4. Change directory to the .github directory:
 cd .github
 
-5.َAfter Change directory to the workflow:
+5.  After Change directory to the workflow:
 cd workflow
 
-5. Within the .github directory, you will find the main.yml job files and its instructions related to the Workflow CD.
+6. Within the .github directory, you will find the main.yml job files and its instructions related to the Workflow CD.
 
 Feel free to explore the contents of the main.yml file to understand the workflow configurations and instructions for continuous deployment in this project.
