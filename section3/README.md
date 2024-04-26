@@ -40,8 +40,12 @@ git clone https://github.com/your-username/wordpress-multi-instance-docker.git
 3. Create a .env file in the project root directory and add your environment variables 
 
 4. Modify docker-compose.yml for any desired customization (optional).
+   in directory :
+```shell
+cd Cangrow-Project/section3
+```
 
-5. Start the services:
+6. Start the services:
 ```shell
 docker-compose up -d
 ```
