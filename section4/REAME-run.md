@@ -5,7 +5,7 @@
 To access the main.yml job files and its instructions for the Workflow CD in this project, follow these steps:
 
 1. Navigate to the project directory:
-cd /home/roxi-t/docker/Cangrow-Project
+cd /Cangrow-Project
 
 
 2. List all files, including hidden ones, using the ls -la command:
