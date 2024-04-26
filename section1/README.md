@@ -51,7 +51,7 @@ To deploy and run the project, follow these steps:
 4. Execute the following command to start the services in detached mode:
 ```shell
 docker-compose up -d
-
+```
 ## Conclusion
 
 This project provides a load-balanced WordPress deployment using Docker Compose and Nginx. The documentation includes explanations of the project structure, files, and installation/execution instructions.
