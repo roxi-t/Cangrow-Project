@@ -11,10 +11,17 @@ Prerequisites
 
 Usage
 
-1. Clone the repository: git clone https://github.com/roxi-t/Cangrow-Project.git
-2. Navigate to the project directory: cd Cangrow-Project
-3. Run Docker Compose: docker-compose up -d
-4. Access WordPress at: http://localhost
+1. Clone the repository:
+2. ```shell
+    git clone https://github.com/roxi-t/Cangrow-Project.git
+   ```
+3. Navigate to the project directory:```shell
+4.  cd Cangrow-Project
+5.  ```
+6. Run Docker Compose: ```shell
+7. docker-compose up -d
+```
+9. Access WordPress at: http://localhost or your server IP
 
 Services
 
