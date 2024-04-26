@@ -49,7 +49,7 @@ To deploy and run the project, follow these steps:
 2. Clone the repository to your local machine.
 3. Navigate to the project directory.
 4. Execute the following command to start the services in detached mode:
-   ```shell
+```shell
 docker-compose up -d
 
 ## Conclusion
