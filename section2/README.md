@@ -1,6 +1,6 @@
-README for Cangrow-Project
+## README for Cangrow-Project
 
-Introduction
+## Introduction
 
 This project provides a Docker Compose configuration for setting up a WordPress website with a MariaDB database master-replica setup using Docker containers.
 
@@ -9,7 +9,7 @@ Prerequisites
 • Docker
 • Docker Compose
 
-Usage
+## Usage
 
 1. Clone the repository:
 ```shell
@@ -25,7 +25,7 @@ Usage
 ```
 4. Access WordPress at: http://localhost or your server IP
 
-Services
+## Services
 
 • nginx: Reverse proxy for WordPress.
 • wordpress1: WordPress instance 1.
@@ -33,7 +33,7 @@ Services
 • mariadb-master: MariaDB master database server.
 • mariadb-replica: MariaDB replica database server.
 
-Configuration
+## Configuration
 
 • docker-compose.yml: Defines configurations for all services, including:
     * Nginx: Reverse proxy settings and port mapping.
@@ -41,16 +41,16 @@ Configuration
     * MariaDB: Database configuration and replication options.
 • nginx.conf: Nginx web server configuration.
 
-Networking
+## Networking
 
 • Custom bridge network named cangrownet with subnet /28
 
-Volumes
+## Volumes
 
 • wordpress_data: Persistent storage for WordPress data.
 • master-data: Persistent storage for MariaDB master data.
 • replica-data: Persistent storage for MariaDB replica data.
 
-Additional Information
+## Additional Information
 
 Refer to the comments in the docker-compose.yml file for more details.
