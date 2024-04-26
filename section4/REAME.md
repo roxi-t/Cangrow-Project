@@ -24,7 +24,7 @@ Next, move into the workflows directory where the main.yml file is located:
 ```shell
 cd workflows
 ```
-**Review the CI/CD Configuration**:
+5. **Review the CI/CD Configuration**:
 Inside the workflows directory, you'll find the main.yml job files. You can open this file using a text editor to view and understand the configuration and instructions for the Continuous Deployment workflow:
 ```shell
 cat main.yml
