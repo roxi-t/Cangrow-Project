@@ -7,7 +7,7 @@ This section outlines the steps to access and review the `main.yml` job file whi
 1. **Navigate to the Project Directory**:
    Open your terminal and change to the project directory with the following command:
    ```shell
-   cd Cangrow-Project
+cd Cangrow-Project
 List Project Files:
 List all files in the directory, including hidden ones, using:
 ```shell
