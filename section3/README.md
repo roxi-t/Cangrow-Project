@@ -1,25 +1,40 @@
 # WordPress Multi-Instance Deployment with Docker Compose
 
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Benefits](#benefits)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+  - [Environment Variables](#environment-variables)
+  - [Custom Nginx Configuration](#custom-nginx-configuration)
+  - [ProxySQL Configuration](#proxysql-configuration)
+- [Usage](#usage)
+- [Troubleshooting](#troubleshooting)
+
 ## Project Overview
 
-This project provides a Docker Compose configuration for deploying multiple instances of WordPress alongside MariaDB and ProxySQL for database management and load balancing.
+This project facilitates the deployment of multiple WordPress instances using Docker Compose, incorporating MariaDB and ProxySQL for enhanced database management and load balancing capabilities.
 
 ## Benefits
 
-- Simplified setup and management of multiple WordPress instances
-- Database load balancing and high availability using ProxySQL
-- Customization through flexible configuration options
+- **Simplified Management**: Streamlines the setup and operation of multiple WordPress sites.
+- **Enhanced Availability**: Utilizes ProxySQL for effective load balancing and high availability.
+- **Flexible Customization**: Offers numerous configuration options to tailor to specific needs.
 
 ## Prerequisites
 
-- Docker:  https://docs.docker.com/get-docker/
-- Docker Compose: https://docs.docker.com/compose/install/
+Before starting, ensure you have Docker and Docker Compose installed on your machine:
+- [Docker Installation Guide](https://docs.docker.com/get-docker/)
+- [Docker Compose Installation Guide](https://docs.docker.com/compose/install/)
 
 ## Installation
 
-1. Clone this repository:
-```shell
-   git clone https://github.com/your-username/wordpress-multi-instance-docker.git
+To install and run the project, follow these steps:
+
+1. Clone the repository:
+   ```shell
+git clone https://github.com/your-username/wordpress-multi-instance-docker.git
 ```
 
 3. Create a .env file in the project root directory and add your environment variables 
@@ -28,7 +43,7 @@ This project provides a Docker Compose configuration for deploying multiple inst
 
 5. Start the services:
 ```shell
- docker-compose up -d
+docker-compose up -d
 ```
 6. and  running this command
 ```shell
