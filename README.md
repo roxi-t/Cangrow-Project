@@ -12,6 +12,7 @@ This repository hosts the configuration files for a scalable WordPress deploymen
 git clone https://github.com/roxi-t/Cangrow-Project.git
 ```
 a directory named Cangrow-Project has been created
+
 3. Go to the project directory :
 ```shell
 cd Cangrow-Project
