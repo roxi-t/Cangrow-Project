@@ -6,4 +6,12 @@ Please note that the unfinished_Project-with-BashScript directory is not part of
 
 Feel free to check out the contents of this directory for a reference to Bash scripting and the Docker Compose file structure, but don't consider it part of the main project setup.
 
-To successfully run the project without using Bash scripts, you can navigate to the section3 directory by running cd /home/roxi-t/docker/Cangrow-Project/section3 and then run docker-compose up -d . It runs the project with 6 containers as intended.
+To successfully run the project without using Bash scripts, you can navigate to the section3 directory by running
+```shell
+cd Cangrow-Project/section3
+```
+ and then run
+ ```shell
+ docker-compose up -d
+```
+ It runs the project with 6 containers as intended.
