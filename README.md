@@ -9,6 +9,5 @@ This repository hosts the configuration files for a scalable WordPress deploymen
 To run this project in the folder /Cangrow-project/section3, follow the steps below:
 Clone the project from your personal GitHub repository or the main project repository using the following command in your terminal:
 ```shell
-git clone https://github.com/roxi-t/Cangrow-Project.git
-## How to Run 
+git clone https://github.com/roxi-t/Cangrow-Project.git```
 
