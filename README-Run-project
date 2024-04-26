@@ -13,7 +13,7 @@ git clone https://github.com/roxi-t/Cangrow-Project.git in directory  /opt/Roxan
 
 4. Use Docker Compose to start the service in detached mode:
 
-cd /opt/Roxana-Teymoori-CanGrow/section3
+cd /Cangrow-Project/section3
 docker-compose up -d
 
 
