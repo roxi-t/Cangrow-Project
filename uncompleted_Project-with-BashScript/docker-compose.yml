@@ -76,4 +76,4 @@ networks:
     driver: bridge  # Use the bridge network driver
     ipam:
       config:
-        - subnet: 172.28.0.0/16  # Define the IP subnet for the network
+        - subnet: /28  # Define the IP subnet for the network
